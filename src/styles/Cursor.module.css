@@ -1,0 +1,9 @@
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
