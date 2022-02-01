@@ -12,7 +12,7 @@ import * as styles from "../styles/Projects.module.css";
 
 export default function Projects() {
   return (
-    <div>
+    <div id='projects'>
       <div className={styles.projectsContainer}>
         <img
           className={styles.img}

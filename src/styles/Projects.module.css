@@ -8,13 +8,11 @@
 
     padding: 20px;
 
-    z-index: 3;
 }
 
 .img {
     max-width: 100%;
     height: auto;
-    z-index: 2;
     cursor: pointer;
 }
 

@@ -14,14 +14,13 @@ export default function Index() {
   useEffect(() => {
     let canvas = document.querySelector('canvas')
 
-
     canvas.setAttribute('style', 'width: 100% !important; height: 100% !important; position: absolute !important; z-index: 0 !important; top: 0px !important; left: 0px !important; pointer-events: initial;')
 
   }, [])
 
   return (
     <div styles={{ padding: "10rem" }}>
-      <div className={styles.headerContainer}>
+      <div id='home' className={styles.headerContainer} >
          <Particles />
         <div className={styles.headerContent}>
           <h1>Isaiah Fowler</h1>
