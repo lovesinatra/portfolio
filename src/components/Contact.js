@@ -6,9 +6,9 @@ import * as styles from "../styles/Contact.module.css";
 
 import { ThemeProvider, makeStyles } from "@mui/styles";
 
-import{ init } from '@emailjs/browser';
+import { init } from "@emailjs/browser";
 
-import emailjs from '@emailjs/browser'
+import emailjs from "@emailjs/browser";
 
 init("user_xfuT8sFopNhHDqasgDnEu");
 
@@ -50,12 +50,23 @@ const Contact = ({ location }) => {
     });
 
     setLoading(true);
-    
-    emailjs.send('service_6jd47cy', 'template_mdprs69', mailOptions).then(() => alert("Message received: I'll reach out to you as soon as possible.")).catch(err => console.log(err)).finally(() => setLoading(false))
+
+    emailjs
+      .send("service_6jd47cy", "template_mdprs69", mailOptions)
+      .then(() => {
+        alert("Message received: I'll reach out to you as soon as possible.");
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+      })
+      .catch((err) => console.log(err))
+      .finally(() => setLoading(false));
   };
 
   return (
-    <div id='contact' style={{minHeight: '100vh'}} className={styles.mainContainer} >
+    <div
+      id="contact"
+      style={{ minHeight: "100vh" }}
+      className={styles.mainContainer}
+    >
       <h1>Contact</h1>
       <form className={styles.container} onSubmit={handleSubmit}>
         <div className={styles.fields}>
@@ -121,7 +132,7 @@ const Contact = ({ location }) => {
             color="secondary"
             variant="outlined"
           >
-            { loading ? "Sending.. ." : 'Submit' }
+            {loading ? "Sending.. ." : "Submit"}
           </Button>
         </div>
       </form>
