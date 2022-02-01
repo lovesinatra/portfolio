@@ -52,7 +52,7 @@
         grid-template-columns: 1fr;
     }
 
-    .projectDescription {
-        margin-top: 1rem;
+    .description {
+        width: 95%;
     }
 }

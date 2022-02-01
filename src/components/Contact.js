@@ -50,8 +50,8 @@ const Contact = ({ location }) => {
     });
 
     setLoading(true);
-
-    emailjs.send('template_mdprs69', 'service_6jd47cy', mailOptions).then(() => alert("Message received: I'll reach out to you as soon as possible.")).catch(err => console.log(err)).finally(() => setLoading(false))
+    
+    emailjs.send('service_6jd47cy', 'template_mdprs69', mailOptions).then(() => alert("Message received: I'll reach out to you as soon as possible.")).catch(err => console.log(err)).finally(() => setLoading(false))
   };
 
   return (
