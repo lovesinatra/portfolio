@@ -55,7 +55,7 @@ const Contact = ({ location }) => {
   };
 
   return (
-    <div className={styles.mainContainer}>
+    <div style={{minHeight: '100vh'}} className={styles.mainContainer} >
       <h1>Contact</h1>
       <form className={styles.container} onSubmit={handleSubmit}>
         <div className={styles.fields}>

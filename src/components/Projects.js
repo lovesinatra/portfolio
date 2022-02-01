@@ -6,6 +6,8 @@ import hap from "../images/hap.png";
 
 import fps from '../images/fps.png'
 
+import GitHubIcon from '@mui/icons-material/GitHub';
+
 import * as styles from "../styles/Projects.module.css";
 
 export default function Projects() {
@@ -37,6 +39,7 @@ export default function Projects() {
               }}
               onClick={() => window.open('https://github.com/fp-rap-build/hap', )}
               type="contained"
+              endIcon={<GitHubIcon style={{marginBottom: '4px'}} />}
             >
               GitHub
             </Button>
@@ -67,6 +70,7 @@ export default function Projects() {
               }}
               onClick={() => window.open('https://github.com/fp-rap-build/fpspokane')}
               type="contained"
+              endIcon={<GitHubIcon style={{marginBottom: '4px'}} />}
             >
               GitHub
             </Button>
