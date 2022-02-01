@@ -51,7 +51,7 @@ const Contact = ({ location }) => {
 
     setLoading(true);
 
-    emailjs.send(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_TEMPLATE_ID, mailOptions).then(() => alert("Message received: I'll reach out to you as soon as possible.")).catch(err => console.log(err)).finally(() => setLoading(false))
+    emailjs.send('template_mdprs69', 'service_6jd47cy', mailOptions).then(() => alert("Message received: I'll reach out to you as soon as possible.")).catch(err => console.log(err)).finally(() => setLoading(false))
   };
 
   return (
