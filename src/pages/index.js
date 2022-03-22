@@ -14,12 +14,14 @@ export default function Index() {
   useEffect(() => {
     let canvas = document.querySelector('canvas')
 
+    if(!canvas) return;
+
     canvas.setAttribute('style', 'width: 100% !important; height: 100% !important; position: absolute !important; z-index: 0 !important; top: 0px !important; left: 0px !important; pointer-events: initial;')
 
   }, [])
 
   return (
-    <div styles={{ padding: "10rem" }}>
+    <div>
       <div id='home' className={styles.headerContainer} >
          <Particles />
         <div className={styles.headerContent}>
@@ -45,9 +47,9 @@ export default function Index() {
           </h4>
           <div className={styles.buttons}></div>
         </div>
-        <Navigation />
+        <Navigation /> 
       </div>
-      <Projects />
+      <Projects /> 
       <Contact />
     </div>
   );

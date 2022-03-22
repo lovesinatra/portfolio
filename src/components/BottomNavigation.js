@@ -93,7 +93,7 @@ function checkVisible(elm, threshold, mode) {
   threshold = threshold || 0;
   mode = mode || "visible";
 
-  var rect = elm.getBoundingClientRect();
+  var rect = elm.getBoundingClientRect() || 0;
   var viewHeight = Math.max(
     document.documentElement.clientHeight,
     window.innerHeight
